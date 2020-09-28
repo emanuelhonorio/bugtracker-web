@@ -1,0 +1,40 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4>{{ "Update Project #" + project?.id }}</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div>
+        <label for="title">title</label>
+        <input
+          id="title"
+          type="text"
+          name="title"
+          [(ngModel)]="project.title"
+        />
+      </div>
+
+      <div>
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          [(ngModel)]="project.description"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="button button--small white"
+      style="margin-right: 10px"
+      (click)="close()"
+    >
+      Cancel
+    </button>
+    <button type="button" class="button button--small" (click)="confirm()">
+      Update
+    </button>
+  </div>
+</div>

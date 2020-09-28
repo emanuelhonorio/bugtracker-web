@@ -1,0 +1,65 @@
+.charts {
+  margin: -20px;
+  margin-top: 80px;
+}
+
+.chart-item {
+  /*for some strange reason flex: 1 doesnt work */
+  /*width: 50%;*/
+  margin: 20px;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  &__header {
+    background-color: #713bdb;
+    color: #fff;
+    padding: 10px;
+  }
+
+  &__body {
+    padding: 10px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 10px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  width: 300px;
+  background-color: #713bdb;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+
+  &--purple {
+    background-color: #713bdb;
+  }
+
+  &--red {
+    background-color: #e74c3c;
+  }
+
+  &--yellow {
+    background-color: #f1c40f;
+  }
+
+  &__value {
+    font-size: 3em;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 4em;
+    transform: rotate(-30deg);
+    opacity: 0.5;
+    -webkit-user-select: none;
+  }
+}

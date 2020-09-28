@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseApiURL: 'http://localhost:3001',
+  LSTokenKey: '$bt_tk',
+  LSSelectedProjectKey: '$bt_sp',
 };
 
 /*

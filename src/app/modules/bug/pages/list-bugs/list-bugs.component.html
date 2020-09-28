@@ -1,0 +1,8 @@
+<div style="margin-bottom: 20px">
+  <app-bugs-header (filter)="onFilter($event)"></app-bugs-header>
+</div>
+<app-bugs-table
+  [bugs]="bugs"
+  (edit)="handleEdit($event)"
+  (delete)="handleDelete($event)"
+></app-bugs-table>

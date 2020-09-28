@@ -1,0 +1,6 @@
+<div class="feed">
+  <div *ngFor="let feedRow of feed" class="feed-row">
+    <h3 class="feed-title">{{ feedRow.title }}</h3>
+    <small class="feed-date">{{ feedRow.createdAt | date }}</small>
+  </div>
+</div>

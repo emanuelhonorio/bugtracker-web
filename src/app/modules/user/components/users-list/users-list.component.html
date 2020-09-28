@@ -1,0 +1,14 @@
+<ul class="users-list">
+  <div *ngFor="let user of users" class="user-row">
+    <div class="user-row__left">
+      <div
+        class="avatar"
+        style="background-image: url({{
+          user.image_url
+        }});background-position: center; background-size: cover;"
+      ></div>
+      <span>{{ user?.name }}</span>
+    </div>
+    <i class="material-icons" (click)="handleDelete(user)">delete</i>
+  </div>
+</ul>

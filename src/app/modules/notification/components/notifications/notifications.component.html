@@ -1,0 +1,16 @@
+<div class="notifications__header">
+  <h3>Notifications</h3>
+</div>
+<div class="notifications__body">
+  <app-invite-row
+    *ngFor="let invite of invites"
+    [invite]="invite"
+    (answer)="handleAccept($event)"
+  ></app-invite-row>
+  <app-notification-row
+    *ngFor="let n of notifications"
+    [notification]="n"
+    (answer)="handleAccept($event)"
+  ></app-notification-row>
+</div>
+<div class="notifications__bottom">View all notifications</div>

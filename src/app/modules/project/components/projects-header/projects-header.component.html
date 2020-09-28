@@ -1,0 +1,23 @@
+<div class="projects-header">
+  <h2>Projects</h2>
+  <div class="projects-header__bottom">
+    <div class="projects-header__bottomLeft">
+      <button routerLink="/projects/new" class="button">
+        <i class="material-icons">add</i>
+        <span>Create Project</span>
+      </button>
+    </div>
+    <form class="projects-header__bottomRight" spellcheck="false">
+      <div class="search-input">
+        <i class="search-input__icon material-icons">search</i>
+        <input
+          #name
+          (input)="onSearchName(name.value)"
+          class="search-input__input"
+          type="text"
+          placeholder="Search..."
+        />
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="cards">
+  <div class="card card--purple">
+    <div class="card__title">Total Projects</div>
+    <div class="card__value">{{ projects?.length }}</div>
+    <i class="card__icon material-icons">library_books</i>
+  </div>
+
+  <div class="card card--red">
+    <div class="card__title">Bugs</div>
+    <div class="card__value">{{ bugs?.length }}</div>
+    <i class="card__icon material-icons">bug_report</i>
+  </div>
+
+  <div class="card card--yellow">
+    <div class="card__title">Members</div>
+    <div class="card__value">{{ members?.length }}</div>
+    <i class="card__icon material-icons">group</i>
+  </div>
+</div>
+
+<div class="charts">
+  <div class="chart-item">
+    <div class="chart-item__header">Bug Severity</div>
+    <div class="chart-item__body">
+      <app-chart-severity-amount [bugs]="bugs"></app-chart-severity-amount>
+    </div>
+  </div>
+
+  <div class="chart-item">
+    <div class="chart-item__header">Bug Status</div>
+    <div class="chart-item__body">
+      <app-chart-bug-status-amount [bugs]="bugs"></app-chart-bug-status-amount>
+    </div>
+  </div>
+</div>

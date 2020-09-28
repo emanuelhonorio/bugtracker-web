@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Users</th>
+    <th>Bugs</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let project of projects">
+    <td>{{ project.title }}</td>
+    <td>{{ project.description }}</td>
+    <td>{{ project.users?.length }}</td>
+    <td>{{ project.bugs?.length }}</td>
+    <td>
+      <i class="material-icons" (click)="edit.emit(project)">create</i>
+      <i class="material-icons" (click)="delete.emit(project)">delete</i>
+    </td>
+  </tr>
+</table>

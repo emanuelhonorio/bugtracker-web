@@ -1,0 +1,38 @@
+<div class="create-user">
+  <h2>Invite users</h2>
+
+  <div class="create-user__top">
+    <form #searchUserForm="ngForm">
+      <div class="search-input">
+        <i class="search-input__icon material-icons">search</i>
+        <input
+          class="search-input__input"
+          type="email"
+          placeholder="Email..."
+          name="email"
+          [(ngModel)]="email"
+          (input)="onSearch(searchUserForm)"
+          required
+          email
+        />
+      </div>
+    </form>
+    <button class="button white">
+      <i class="material-icons">reply</i>
+      <span>Import multiple users</span>
+    </button>
+  </div>
+
+  <div *ngIf="user" class="user-row">
+    <div class="user-row__left">
+      <div
+        class="avatar"
+        style="background-image: url({{
+          user.image_url
+        }});background-position: center; background-size: cover;"
+      ></div>
+      <span>{{ user.name }}</span>
+    </div>
+    <i class="material-icons" (click)="onAddUser(user)">add</i>
+  </div>
+</div>

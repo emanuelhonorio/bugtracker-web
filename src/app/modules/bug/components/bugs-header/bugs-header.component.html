@@ -1,0 +1,37 @@
+<div class="bugs-header">
+  <h2>Bugs</h2>
+  <div class="bugs-header__bottom">
+    <div>
+      <button routerLink="/bugs/new" class="button">
+        <i class="material-icons">add</i>
+        <span>Add Bug</span>
+      </button>
+    </div>
+    <form class="bugs-header__bottomRight" spellcheck="false">
+      <select (change)="onFilter()" name="status" [(ngModel)]="status">
+        <option value="">Status</option>
+        <option value="OPEN">Open</option>
+        <option value="CLOSED">Closed</option>
+        <option value="FIXED">Fixed</option>
+      </select>
+      <select (change)="onFilter()" name="severity" [(ngModel)]="severity">
+        <option value="">Severity</option>
+        <option value="LOW">Low</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="HIGH">High</option>
+        <option value="CRITICAL">Critical</option>
+      </select>
+      <div class="search-input">
+        <i class="search-input__icon material-icons">search</i>
+        <input
+          name="title"
+          class="search-input__input"
+          type="text"
+          placeholder="Search..."
+          (input)="onFilter()"
+          [(ngModel)]="title"
+        />
+      </div>
+    </form>
+  </div>
+</div>

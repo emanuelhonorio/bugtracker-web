@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+
+  &:hover {
+    background: #f5f6fa;
+  }
+}
+
+.notification__left {
+  padding: 15px;
+  padding-right: 0;
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #713bdb;
+    border-radius: 50px;
+  }
+}
+
+.notification__body {
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f6fa;
+
+  .title {
+    font-size: 14px;
+    color: #444;
+  }
+}

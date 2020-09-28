@@ -1,0 +1,48 @@
+<div class="create-bug">
+  <h2>Report a new bug</h2>
+
+  <form
+    #createBugForm="ngForm"
+    (submit)="handleCreateBug($event)"
+    autocomplete="off"
+    spellcheck="false"
+  >
+    <div>
+      <label for="title">Title</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        [(ngModel)]="bug.title"
+        required
+      />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea
+        rows="7"
+        name="description"
+        id="description"
+        [(ngModel)]="bug.description"
+        required
+      ></textarea>
+    </div>
+    <div>
+      <label for="severity">Severity</label>
+      <select name="severity" id="severity" [(ngModel)]="bug.severity" required>
+        <option value="LOW">Low</option>
+        <option value="MEDIUM">Medium</option>
+        <option value="HIGH">High</option>
+        <option value="CRITICAL">Critical</option>
+      </select>
+    </div>
+
+    <button
+      class="button"
+      type="submit"
+      [disabled]="!createBugForm.valid || isSubmitting"
+    >
+      Create Project
+    </button>
+  </form>
+</div>

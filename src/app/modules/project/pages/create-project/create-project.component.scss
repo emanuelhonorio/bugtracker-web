@@ -1,0 +1,50 @@
+h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  color: #444;
+}
+
+label {
+  color: #74798c;
+  font-size: 14px;
+  display: block;
+
+  margin-bottom: 9px;
+}
+
+form > div:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #713bdb6b;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: #fff;
+  outline: 0;
+  padding: 10px;
+}
+
+input[type="text"] {
+  height: 55px;
+  max-width: 400px;
+}
+
+textarea {
+  max-width: 800px;
+  resize: vertical;
+  font-size: 14px;
+}
+
+select {
+  max-width: 400px;
+  height: 55px;
+}
+
+button {
+  outline: 0;
+  margin-top: 40px;
+}

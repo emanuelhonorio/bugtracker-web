@@ -1,0 +1,7 @@
+<div class="app-template" [ngClass]="{ closed: isSidebarClosed }">
+  <app-sidebar class="sidebar"></app-sidebar>
+  <app-navbar (toggle)="toggleSidebar()"></app-navbar>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

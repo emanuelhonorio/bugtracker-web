@@ -1,0 +1,48 @@
+<aside class="sidebar">
+  <div class="sidebar__top" routerLink="/">Bug Tracker</div>
+  <div class="sidebar__center">
+    <select
+      [value]="selectedProject ? selectedProject.id : selectedProject"
+      (change)="onSelectProject($event)"
+    >
+      <option [value]="null">No project selected</option>
+      <option *ngFor="let project of projects" [value]="project.id">
+        {{ project?.title }}
+      </option>
+    </select>
+    <i class="material-icons" (click)="onClickRefresh()"> refresh </i>
+  </div>
+  <div
+    routerLink="/"
+    routerLinkActive="sidebar__row--active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="sidebar__row"
+  >
+    <i class="material-icons">home</i>
+    <span>Dashboard</span>
+  </div>
+  <div
+    routerLink="/projects"
+    routerLinkActive="sidebar__row--active"
+    class="sidebar__row"
+  >
+    <i class="material-icons">library_books</i>
+    <span>Projects</span>
+  </div>
+  <div
+    routerLink="/bugs"
+    routerLinkActive="sidebar__row--active"
+    class="sidebar__row"
+  >
+    <i class="material-icons">bug_report</i>
+    <span>Bugs</span>
+  </div>
+  <div
+    routerLink="/users"
+    routerLinkActive="sidebar__row--active"
+    class="sidebar__row"
+  >
+    <i class="material-icons">group</i>
+    <span>Members</span>
+  </div>
+</aside>

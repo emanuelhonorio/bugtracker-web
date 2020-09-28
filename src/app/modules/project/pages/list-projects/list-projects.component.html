@@ -1,0 +1,8 @@
+<div style="margin-bottom: 20px">
+  <app-projects-header (search)="onSearchTitle($event)"></app-projects-header>
+</div>
+<app-projects-table
+  [projects]="projects"
+  (edit)="handleEdit($event)"
+  (delete)="handleDelete($event)"
+></app-projects-table>

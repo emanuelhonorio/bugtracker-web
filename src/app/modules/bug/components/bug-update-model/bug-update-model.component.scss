@@ -1,0 +1,38 @@
+label {
+  color: #74798c;
+  font-size: 14px;
+  display: block;
+
+  margin-bottom: 9px;
+}
+
+form > div:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #713bdb6b;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: #fff;
+  outline: 0;
+  padding: 10px;
+}
+
+input[type="text"],
+select {
+  height: 55px;
+}
+
+textarea {
+  font-size: 14px;
+  resize: vertical;
+}
+
+button {
+  outline: 0;
+  margin-top: 10px;
+}

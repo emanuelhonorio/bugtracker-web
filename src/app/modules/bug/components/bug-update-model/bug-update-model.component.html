@@ -1,0 +1,57 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4>{{ "Update Bug #" + bug?.id }}</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div>
+        <label for="title">title</label>
+        <input id="title" type="text" name="title" [(ngModel)]="bug.title" />
+      </div>
+
+      <div>
+        <label for="description">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          [(ngModel)]="bug.description"
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="severity">Severity</label>
+        <select
+          [(ngModel)]="bug.severity"
+          name="severity"
+          id="severity"
+          required
+        >
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+        </select>
+      </div>
+      <div>
+        <label for="severity">Status</label>
+        <select [(ngModel)]="bug.status" name="status" id="status" required>
+          <option value="OPEN">Open</option>
+          <option value="CLOSED">Closed</option>
+          <option value="FIXED">Fixed</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="button button--small white"
+      style="margin-right: 10px"
+      (click)="close()"
+    >
+      Cancel
+    </button>
+    <button type="button" class="button button--small" (click)="confirm()">
+      Update
+    </button>
+  </div>
+</div>

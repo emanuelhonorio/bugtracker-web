@@ -1,0 +1,26 @@
+:host {
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.notifications__header {
+  font-size: 14px;
+  padding: 15px;
+  color: #333;
+}
+
+.notifications__body {
+  max-height: 200px;
+  overflow: auto;
+}
+
+.notifications__bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  padding: 15px;
+
+  &:hover {
+    background-color: #eee;
+  }
+}

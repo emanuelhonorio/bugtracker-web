@@ -1,0 +1,38 @@
+<div class="create-project">
+  <h2>Looks like you don't have any Project</h2>
+
+  <form
+    #formProject="ngForm"
+    (submit)="handleCreateProjectSubmit()"
+    autocomplete="off"
+    spellcheck="false"
+  >
+    <div>
+      <label for="title">Title</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        [(ngModel)]="project.title"
+        required
+      />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea
+        rows="7"
+        name="description"
+        id="description"
+        [(ngModel)]="project.description"
+      ></textarea>
+    </div>
+
+    <button
+      class="button"
+      type="submit"
+      [disabled]="formProject.invalid || isSubmitting"
+    >
+      Create Project
+    </button>
+  </form>
+</div>

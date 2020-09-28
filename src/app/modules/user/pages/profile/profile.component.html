@@ -1,0 +1,39 @@
+<h2>Profile</h2>
+
+<form (submit)="handleUpdateProfile()" #updateProfileForm="ngForm">
+  <div>
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="text"
+      name="email"
+      [(ngModel)]="userUpdating.email"
+      readonly
+    />
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" [(ngModel)]="userUpdating.name" />
+  </div>
+  <div>
+    <label for="imageUrl">Image URL</label>
+    <input
+      type="text"
+      id="imageUrl"
+      name="imageUrl"
+      [(ngModel)]="userUpdating.image_url"
+    />
+  </div>
+  <div class="buttons">
+    <button
+      class="button"
+      type="submit"
+      [disabled]="!updateProfileForm.valid || isSubmitting"
+    >
+      Update Profile
+    </button>
+    <button type="button" class="button white" (click)="fillUserUpdating()">
+      Reset
+    </button>
+  </div>
+</form>

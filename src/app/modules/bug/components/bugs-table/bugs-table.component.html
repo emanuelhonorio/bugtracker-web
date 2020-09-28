@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Severity</th>
+    <th>Date</th>
+    <th></th>
+  </tr>
+  <tr
+    *ngFor="let bug of bugs"
+    [ngClass]="{ 'status-closed': bug.status === 'CLOSED' }"
+  >
+    <td>{{ bug.title }}</td>
+    <td>{{ bug.description }}</td>
+    <td class="status">{{ bug.status }}</td>
+    <td>{{ bug.severity }}</td>
+    <td>{{ formatDateFromNow(bug.createdAt) }}</td>
+    <td>
+      <i class="material-icons" (click)="edit.emit(bug)">create</i>
+      <i class="material-icons" (click)="delete.emit(bug)">delete</i>
+    </td>
+  </tr>
+  <tr *ngIf="bugs.length === 0">
+    <td colspan="6">No bugs yet</td>
+  </tr>
+</table>

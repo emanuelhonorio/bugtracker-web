@@ -1,0 +1,27 @@
+<div class="navbar">
+  <div class="navbar__left">
+    <i class="material-icons" (click)="onToggle()">menu</i>
+    <span (click)="onToggle()">Hide menu</span>
+  </div>
+
+  <nav *ngIf="user?.name" class="navbar__nav">
+    <div class="navbar__option navbar__option--notification">
+      <i class="material-icons">notifications</i>
+      <app-notifications class="notifications"></app-notifications>
+    </div>
+    <div class="navbar__option profile">
+      <div
+        class="profile__avatar"
+        style="background-image: url({{
+          user.image_url
+        }});background-position: center; background-size: cover;"
+      ></div>
+      <span class="profile__name">{{ user?.name }}</span>
+
+      <div class="dropdown">
+        <div class="dropdown__option" (click)="handleProfile()">Profile</div>
+        <div class="dropdown__option" (click)="logout()">Logout</div>
+      </div>
+    </div>
+  </nav>
+</div>

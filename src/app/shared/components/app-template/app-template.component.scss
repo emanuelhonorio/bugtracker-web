@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.app-template:not(.closed) {
+  margin-left: 250px;
+}
+
+.app-template.closed .sidebar {
+  display: none;
+}
+
+.content {
+  padding: 50px;
+}

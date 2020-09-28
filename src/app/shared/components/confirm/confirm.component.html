@@ -1,0 +1,21 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4>{{ title || "Confirm" }}</h4>
+  </div>
+  <div class="modal-body">
+    <p>{{ message || "Are you sure?" }}</p>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="button button--small white"
+      (click)="close()"
+      style="margin-right: 10px"
+    >
+      Cancel
+    </button>
+    <button type="button" class="button button--small" (click)="confirm()">
+      OK
+    </button>
+  </div>
+</div>

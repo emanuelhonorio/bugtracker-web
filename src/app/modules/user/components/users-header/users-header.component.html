@@ -1,0 +1,28 @@
+<div class="users-header">
+  <h2>Members</h2>
+  <div class="users-header__bottom">
+    <div class="users-header__bottomLeft">
+      <button routerLink="/users/new" class="button">
+        <i class="material-icons">add</i>
+        <span>Invite Users</span>
+      </button>
+      <button class="button white">
+        <i class="material-icons">reply</i>
+        <span>Export those members</span>
+      </button>
+    </div>
+    <form class="users-header__bottomRight" spellcheck="false">
+      <div class="search-input">
+        <i class="search-input__icon material-icons">search</i>
+        <input
+          class="search-input__input"
+          type="text"
+          placeholder="Search..."
+          name="name"
+          [(ngModel)]="name"
+          (input)="onInput()"
+        />
+      </div>
+    </form>
+  </div>
+</div>

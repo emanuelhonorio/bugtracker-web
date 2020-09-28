@@ -1,0 +1,4 @@
+<div style="margin-bottom: 20px">
+  <app-users-header (search)="onSearch($event)"></app-users-header>
+</div>
+<app-users-list [users]="users" (delete)="onDelete($event)"></app-users-list>

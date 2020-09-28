@@ -1,0 +1,32 @@
+<div class="sign-up">
+  <h2>Sign up</h2>
+
+  <form #signUpForm="ngForm" (submit)="handleSignUp()">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your name"
+      [(ngModel)]="user.name"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="emanuelh.dev@gmail.com"
+      [(ngModel)]="user.email"
+      required
+    />
+    <input
+      type="password"
+      name="password"
+      placeholder="********"
+      [(ngModel)]="user.password"
+      required
+    />
+
+    <button type="submit" [disabled]="!signUpForm.valid || isSubmitting">
+      Sign up
+    </button>
+    <small routerLink="/signin">Sign in</small>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<div class="notification__body">
+  <p class="title">
+    <strong>{{ invite?.by_user?.name }}</strong> lhe convidou para o
+    <strong>{{ invite?.project?.title }}</strong>
+  </p>
+  <small class="date">{{ formatDateFromNow(invite?.createdAt) }}</small>
+</div>
+<div class="notification__right">
+  <i class="material-icons">more_vert</i>
+  <div class="notification__buttons">
+    <div (click)="handleAccept(invite, true)" class="button--accept">
+      Accept
+    </div>
+    <div (click)="handleAccept(invite, false)" class="button--decline">
+      Decline
+    </div>
+  </div>
+</div>

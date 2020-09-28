@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+@import "~ngx-toastr/toastr";
+
+@import "../node_modules/ngx-simple-modal/styles/simple-modal.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+
+  background-color: #f5f6fa;
+}
+
+html,
+body {
+  min-height: 100vh;
+  height: auto;
+}
+
+button:disabled {
+  filter: brightness(50%);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  background: #713bdb;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  padding: 13px 31px;
+  cursor: pointer;
+  > i {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: #6934d1;
+  }
+
+  &:active {
+    background: #481ba0;
+  }
+
+  &--small {
+    padding: 7px 15px;
+  }
+
+  &.white {
+    color: #74798c;
+    background-color: #fff;
+
+    &:hover {
+      background: #fafafa;
+    }
+
+    &:active {
+      background: #f5f6fa;
+    }
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
