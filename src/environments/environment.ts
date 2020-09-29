@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseApiURL: 'http://localhost:3001',
+  baseApiURL: 'https://bugtracker-api.herokuapp.com',
   LSTokenKey: '$bt_tk',
   LSSelectedProjectKey: '$bt_sp',
 };

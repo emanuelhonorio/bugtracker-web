@@ -54,7 +54,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       } else {
         this.bugs = [];
         this.members = [];
-        this.toastr.error('no project selected');
+        this.toastr.warning('no project selected');
       }
     } catch (err) {
       this.toastr.error(
