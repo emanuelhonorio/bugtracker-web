@@ -32,6 +32,7 @@ export class ChartSeverityAmountComponent implements OnInit, OnChanges {
   }
 
   initChartData() {
+    this.pieChartData = [0, 0, 0, 0];
     for (let bug of this.bugs) {
       let idx = this.pieChartLabels.indexOf(bug.severity);
       if (idx !== -1) {

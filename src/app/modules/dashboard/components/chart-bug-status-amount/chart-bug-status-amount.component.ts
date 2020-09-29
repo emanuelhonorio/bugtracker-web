@@ -32,6 +32,7 @@ export class ChartBugStatusAmountComponent implements OnInit, OnChanges {
   ngOnInit() {}
 
   initChartData() {
+    this.pieChartData = [0, 0, 0];
     for (let bug of this.bugs) {
       let idx = this.pieChartLabels.indexOf(bug.status);
       if (idx !== -1) {
