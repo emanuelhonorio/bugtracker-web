@@ -12,13 +12,26 @@ export class CreateProjectComponent implements OnInit {
   project: any = {};
   isSubmitting = false;
 
+  title = "Create a new project";
+
   constructor(
     private projectService: ProjectService,
     private router: Router,
     private toastr: ToastrService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.handleFirstProject();
+  }
+
+  async handleFirstProject() {
+    const projects = <any[]>await this.projectService.getProjects({});
+
+    if (projects.length === 0) { // First Project
+      this.title = "Looks like you don't have any Project"
+      console.log(projects)
+    }
+  }
 
   async handleCreateProjectSubmit() {
     try {

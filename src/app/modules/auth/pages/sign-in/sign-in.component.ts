@@ -33,4 +33,16 @@ export class SignInComponent implements OnInit {
 
     this.isSubmitting = false;
   }
+
+  async signInAsDemo() {
+    try {
+      this.isSubmitting = true;
+      const user = await this.authService.signInAsDemo();
+      this.router.navigateByUrl('/');
+    } catch (err) {
+      this.toastr.error(err?.error.error || 'Error, try again later');
+    }
+
+    this.isSubmitting = false;
+  }
 }

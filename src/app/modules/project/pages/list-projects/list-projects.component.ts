@@ -69,12 +69,12 @@ export class ListProjectsComponent implements OnInit {
   }
 
   async deleteProject(id) {
-    console.log('deleting bug');
+    console.log('deleting project');
     try {
       await this.projectService.deleteProject(id);
-      this.toastr.success('bug deleted');
+      this.toastr.success('project deleted');
     } catch (err) {
-      this.toastr.error(err?.error?.error || 'error while deleting bug');
+      this.toastr.error(err?.error?.error || 'error while deleting project');
     }
   }
 }

@@ -46,6 +46,17 @@ export class AuthService {
       });
   }
 
+  signInAsDemo() {
+    return this.http
+      .post(`${this.baseApiURL}/signin/demo`, {})
+      .toPromise()
+      .then((response: any) => {
+        localStorage.setItem(this.LSTokenKey, response.access_token);
+        this.userBS.next(response.user);
+        return response;
+      });
+  }
+
   logout(): void {
     localStorage.removeItem(this.LSTokenKey);
     this.userBS.next({});
